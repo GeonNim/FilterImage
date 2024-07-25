@@ -1,0 +1,28 @@
+/*Layout Setting*/
+*{
+  margin: 0; padding: 0; box-sizing: border-box;
+}
+body{
+  width: 100%; height: 100vh; background: #a7ddbc; display: flex; justify-content: center;
+}
+.wrapper{
+  width: 100%; max-width: 1200px;
+}
+.filter-wrapper{
+  margin-top: 20vh;
+}
+
+/*Filter Button Box Style*/
+.filter-btns{
+  width: 100%; display: flex;
+}
+.filter-btns .filter-btn{
+  border: 1px solid #fff; outline: 0; width: 16.66%; padding: 0.5rem 0 ; background: #316764;
+}
+.filter-images{
+  width: 100%;  display: flex;
+  
+}
+.filter-images .filter-image{
+  border: 1px solid #fff; outline: 0;
+}
