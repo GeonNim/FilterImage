@@ -1,0 +1,23 @@
+@media screen and (max-width: 1020px) {
+  .filter-wrapper {
+    margin: 20vh 5rem 0 5rem;
+    transition: all 0.5s;
+  }
+  .light-box {
+    width: 70%;
+    transition: all 0.5s;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .filter-btns !data-filter='filter menu' {
+  }
+  .light-box {
+    width: 80%;
+    transition: all 0.5s;
+  }
+}
+@media screen and (max-width: 510px) {
+  .filter-images {
+  }
+}

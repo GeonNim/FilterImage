@@ -60,7 +60,6 @@ function activateFilter() {
   // Array.from()을 사용하여 배열로 변환한다.
   Array.from(imageElements).filter((imageElement) => {
     imageElement.classList.add('hide');
-    imageElement.classList.remove('show');
 
     setTimeout(() => {
       if (
@@ -81,7 +80,8 @@ function activateFilter() {
 btns.forEach(function (btn) {
   btn.addEventListener('click', activateFilter);
 });
-
+const lightBox = document.querySelector('.light-box');
+const overLay = document.querySelector('.overlay');
 // activate light box when click each image
 const showLightBox = (e) => {
   const taget = e.currentTarget;
@@ -97,8 +97,25 @@ const showLightBox = (e) => {
 
   lightBoxImage.setAttribute('src', selectedImage);
   categoryElement.textContent = categoryName;
+  lightBox.style.display = 'block';
+  overLay.style.display = 'block';
 };
 
 imageElements.forEach((imageElement) => {
   imageElement.addEventListener('click', showLightBox);
 });
+
+// close light bx
+const closeBtn = document.querySelector('.close');
+
+const closeLightBox = () => {
+  lightBox.style.display = 'none';
+  overLay.style.display = 'none';
+};
+
+// closeBtn.addEventListener('click', closeLightBox);
+// overLay.addEventListener('click', closeLightBox);
+
+[closeBtn, overLay].forEach((element) =>
+  element.addEventListener('click', closeLightBox)
+);

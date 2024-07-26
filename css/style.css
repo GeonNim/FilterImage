@@ -18,6 +18,36 @@ body {
 }
 .filter-wrapper {
   margin-top: 20vh;
+  transition: all 0.5s;
+}
+
+
+/* ㅇㅅㅇ */
+.media-box{
+  display: flex;
+}
+.menu-I{
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0.25rem;
+  border: 1px solid #000;
+  display: none;
+}
+.menu-I .up{
+  width: 100%;
+  height: 1px;
+  border: 1px solid #000;
+  justify-content: center;
+  align-items: center;
+}
+.menu-I .down{
+  width: 1px;
+  height: 100%;
+  border: 1px solid #000;
+ 
+  /* left: 50%;
+  top: 50%; */
+  transform: translate(-50%, -50%);
 }
 
 /*Filter Button Box Style*/
@@ -100,19 +130,30 @@ body {
 }
 
 /*Light Box Style*/
+
+
 .light-box {
   width: 50%;
   background: #316764;
   position: fixed;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);.light-box
   padding: 1rem;
   border-radius: 0.25rem;
   animation: box-scale 0.3s 1;
   z-index: 10;
   display: none;
+  transition: all 0.5s;
 }
+.light-box.show {
+  display: block;
+}
+.light-box.hide{
+  display: none;
+}
+
+
 
 @keyframes box-scale {
   from {
@@ -123,6 +164,7 @@ body {
   }
 }
 
+
 .light-box .light-box-text {
   display: flex;
   justify-content: space-between;
@@ -130,6 +172,8 @@ body {
 }
 .light-box .light-box-text .title {
   color: #fff;
+  display: flex;
+  gap: 0.75rem;
 }
 .light-box .light-box-text button {
   padding: 0.25rem 0.75rem;
